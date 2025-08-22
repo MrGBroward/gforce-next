@@ -7,6 +7,8 @@ const colors = {
   ink: "#0f172a"
 };
 
+const FINANCE_URL = "https://www.getpressurecleaningbroward.com/finance";
+
 const container = { maxWidth: 1200, margin: "0 auto", padding: "0 18px" };
 const h1 = { fontSize: "2.5rem", lineHeight: 1.2, margin: "0 0 12px", color: "#fff" };
 const h2 = { fontSize: "1.6rem", margin: "0 0 8px" };
@@ -17,6 +19,9 @@ const btnOutline = { display: "inline-block", background: "#fff", color: colors.
 export const dynamic = "force-dynamic"; // avoid prerender timeout
 
 function Header() {
+  <a href={FINANCE_URL} style={{ ...btnOutline, padding: "8px 14px" }}>
+  Finance with Klarna
+</a>
   return (
     <header style={{ background: "#fff", borderBottom: `1px solid ${colors.border}` }}>
       <div style={{ ...container, display: "flex", alignItems: "center", justifyContent: "space-between", minHeight: 80, gap: 16 }}>
@@ -37,6 +42,9 @@ function Header() {
 }
 
 function Hero() {
+  <a href={FINANCE_URL} style={btnOutline}>
+  Finance with Klarna
+</a>
   return (
     <section style={{ background: colors.bg, color: "#fff", padding: "64px 0" }}>
       <div style={{ ...container, maxWidth: 1200 }}>
