@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  staticPageGenerationTimeout: 120
+  experimental: {
+    appDir: true,
+  },
 };
+
 export default nextConfig;
