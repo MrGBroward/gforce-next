@@ -8,8 +8,6 @@ const colors = {
   ink: "#0f172a"
 };
 
-const FINANCE_URL = "https://www.getpressurecleaningbroward.com/finance";
-
 const container = { maxWidth: 1200, margin: "0 auto", padding: "0 18px" };
 const h1 = { fontSize: "2.5rem", lineHeight: 1.2, margin: "0 0 12px", color: "#fff" };
 const h2 = { fontSize: "1.6rem", margin: "0 0 8px" };
