@@ -66,15 +66,11 @@ export default function Page() {
 
       {/* ---------- HERO BAND (dark) ---------- */}
       <section style={{ background: colors.bg, color: "#fff", padding: "28px 0 36px" }}>
-        <div style={{ ...container, textAlign: "center" }}>
-          <h1 style={h1}>Broward County Pressure Cleaning</h1>
-          <p style={{ ...p, color: colors.lightText, margin: "12px auto 0", maxWidth: 900 }}>
-            G-Force Exterior Cleaning Services helps South Florida properties look their best while
-            protecting roofs, paint, and landscaping. We schedule around your needs—early mornings,
-            weekends, or off-peak hours—and we offer financing and flexible pricing, especially for
-            long-term and multi-site contracts. Expect clear communication, photo documentation, and
-            results you can see.
-          </p>
+       <div style={{ marginTop: 18, display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+  <a href="/#contact" style={btnSolid}>Get a Free Quote</a>
+  <a href="/finance#checkout" style={btnOutline}>Finance with Klarna</a>
+  <a href="/gallery.html" style={btnOutline}>View Full Gallery</a>
+</div>
 
           <div style={{ marginTop: 18, display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
             <a href="/#contact" style={btnSolid}>Get a Free Quote</a>
