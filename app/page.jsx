@@ -5,8 +5,8 @@ export const metadata = {
 };
 
 const colors = {
-  bg: "#0f172a",        // header + footer background
-  panel: "#0b1324",     // dark panel behind the form
+  bg: "#0f172a",
+  panel: "#0b1324",
   ink: "#0f172a",
   text: "#0f172a",
   border: "#1f2a44",
@@ -41,7 +41,8 @@ const btnOutline = {
 export default function Page() {
   return (
     <main>
-      {/* ---------- HEADER / HERO (dark) ---------- */}
+
+      {/* ---------- HEADER ---------- */}
       <header style={{ background: colors.bg, color: "#fff", padding: "18px 0" }}>
         <div style={{ ...container, display: "flex", alignItems: "center", gap: 16 }}>
           <img
@@ -49,8 +50,10 @@ export default function Page() {
             alt="G-Force Exterior Cleaning"
             style={{ height: 54, width: "auto" }}
           />
-
           <nav style={{ marginLeft: "auto", display: "flex", gap: 16, alignItems: "center" }}>
+            <a href="/gallery.html" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>
+              Gallery
+            </a>
             <a href="/#services" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>
               Services
             </a>
@@ -64,17 +67,23 @@ export default function Page() {
         </div>
       </header>
 
-      {/* ---------- HERO BAND (dark) ---------- */}
+      {/* ---------- HERO BAND ---------- */}
       <section style={{ background: colors.bg, color: "#fff", padding: "28px 0 36px" }}>
-       <div style={{ marginTop: 18, display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-  <a href="/#contact" style={btnSolid}>Get a Free Quote</a>
-  <a href="/finance#checkout" style={btnOutline}>Finance with Klarna</a>
-  <a href="/gallery.html" style={btnOutline}>View Full Gallery</a>
-</div>
+        <div style={{ ...container, textAlign: "center" }}>
+          <h1 style={h1}>Broward County Pressure Cleaning</h1>
+          <p style={{ ...p, color: colors.lightText, margin: "12px auto 0", maxWidth: 900 }}>
+            G-Force Exterior Cleaning Services helps South Florida properties look their best while
+            protecting roofs, paint, and landscaping. We schedule around your needs—early mornings,
+            weekends, or off-peak hours—and we offer financing and flexible pricing, especially for
+            long-term and multi-site contracts. Expect clear communication, photo documentation, and
+            results you can see.
+          </p>
 
+          {/* CTAs */}
           <div style={{ marginTop: 18, display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
             <a href="/#contact" style={btnSolid}>Get a Free Quote</a>
             <a href="/finance#checkout" style={btnOutline}>Finance with Klarna</a>
+            <a href="/gallery.html" style={btnOutline}>View Full Gallery</a>
           </div>
 
           <div style={{ marginTop: 16, display: "flex", gap: 18, justifyContent: "center", alignItems: "center" }}>
@@ -87,15 +96,20 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ---------- SERVICES (links to .html pages) ---------- */}
+      {/* ---------- SERVICES ---------- */}
       <section id="services" style={{ padding: "36px 0" }}>
         <div style={container}>
           <h2 style={{ ...h2, textAlign: "center" }}>Services</h2>
-
-          <ul style={{
-            maxWidth: 900, margin: "16px auto 0", display: "grid", gap: 10,
-            listStyle: "disc", paddingLeft: 20
-          }}>
+          <ul
+            style={{
+              maxWidth: 900,
+              margin: "16px auto 0",
+              display: "grid",
+              gap: 10,
+              listStyle: "disc",
+              paddingLeft: 20,
+            }}
+          >
             <li>
               <a href="/services/soft-wash-roof-cleaning.html" style={{ color: colors.ink, textDecoration: "underline" }}>
                 Soft-wash roof cleaning
@@ -125,7 +139,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ---------- CONTACT (full-width dark section) ---------- */}
+      {/* ---------- CONTACT ---------- */}
       <section id="contact" style={{ background: colors.bg, color: "#fff", padding: "48px 16px" }}>
         <div style={{ ...container, maxWidth: 900 }}>
           <h2 style={{ textAlign: "center", margin: "0 0 8px", fontSize: 28 }}>Contact G-Force</h2>
@@ -133,12 +147,11 @@ export default function Page() {
             Tell us what you’d like cleaned and we’ll confirm pricing &amp; scheduling.
           </p>
 
+          {/* Netlify form */}
           <form
             name="contact"
             method="POST"
-            // If Netlify Forms is still in use, leave the next two lines in place.
             data-netlify="true"
-            // data-netlify-honeypot="bot-field"
             action="/thanks.html"
             style={{
               display: "grid",
@@ -149,10 +162,8 @@ export default function Page() {
               padding: 20,
               borderRadius: 12,
               border: `1px solid ${colors.border}`,
-              boxShadow: "0 0 0 1px rgba(255,255,255,0.03) inset",
             }}
           >
-            {/* Netlify hidden form-name (harmless if not using Netlify) */}
             <input type="hidden" name="form-name" value="contact" />
 
             <label style={{ display: "grid", gap: 6, fontSize: 14, color: "#e2e8f0" }}>
@@ -168,7 +179,6 @@ export default function Page() {
                   border: "1px solid #334155",
                   background: "#ffffff",
                   color: colors.ink,
-                  outline: "none",
                 }}
               />
             </label>
@@ -186,7 +196,6 @@ export default function Page() {
                   border: "1px solid #334155",
                   background: "#ffffff",
                   color: colors.ink,
-                  outline: "none",
                 }}
               />
             </label>
@@ -204,7 +213,6 @@ export default function Page() {
                   border: "1px solid #334155",
                   background: "#ffffff",
                   color: colors.ink,
-                  outline: "none",
                   resize: "vertical",
                 }}
               />
@@ -225,15 +233,11 @@ export default function Page() {
             >
               Send Message
             </button>
-
-            <p style={{ textAlign: "center", margin: 0, fontSize: 12, color: "#94a3b8" }}>
-              We’ll reply within one business day.
-            </p>
           </form>
         </div>
       </section>
 
-      {/* ---------- FOOTER (dark, matches header) ---------- */}
+      {/* ---------- FOOTER ---------- */}
       <footer style={{ background: colors.bg, color: "#fff", padding: "20px 0" }}>
         <div style={{ ...container, textAlign: "center", fontSize: 14 }}>
           <div style={{ marginBottom: 8 }}>
@@ -241,8 +245,8 @@ export default function Page() {
               Privacy Policy
             </a>
             <span style={{ opacity: 0.6 }}> &nbsp;•&nbsp; </span>
-            <a href="/#services" style={{ color: "#fff", textDecoration: "underline" }}>
-              Services
+            <a href="/gallery.html" style={{ color: "#fff", textDecoration: "underline" }}>
+              Gallery
             </a>
             <span style={{ opacity: 0.6 }}> &nbsp;•&nbsp; </span>
             <a href="/finance#checkout" style={{ color: "#fff", textDecoration: "underline" }}>
@@ -254,6 +258,7 @@ export default function Page() {
           </div>
         </div>
       </footer>
+
     </main>
   );
 }
