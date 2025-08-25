@@ -61,6 +61,14 @@ export default function Page() {
               Services
             </a>
             <a href="/#contact" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>
+  <header style={{ background: colors.bg, color: "#fff", padding: "18px 0" }}>
+  <nav style={{ display: "flex", justifyContent: "center", gap: "24px" }}>
+    <a href="/#services" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>Services</a>
+    <a href="/gallery.html" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>Gallery</a>
+    <a href="/blog.html" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>Blog</a>
+    <a href="/#contact" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>Contact</a>
+  </nav>
+</header>
               Contact
             </a>
             <a href="/finance#checkout" style={btnOutline}>
