@@ -43,6 +43,9 @@ export default function Page() {
     <main>
 
       {/* ---------- HEADER ---------- */}
+      <a href="/blog.html" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>
+  Blog
+</a>
       <header style={{ background: colors.bg, color: "#fff", padding: "18px 0" }}>
         <div style={{ ...container, display: "flex", alignItems: "center", gap: 16 }}>
           <img
