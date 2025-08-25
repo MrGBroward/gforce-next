@@ -42,33 +42,34 @@ export default function Page() {
   return (
     <main>
 
-      {/* ---------- HEADER ---------- */}
+   /* ---------- HEADER (single nav) ---------- */
+<header style={{ background: colors.bg, color: "#fff", padding: "18px 0" }}>
+  <div style={{ ...container, display: "flex", alignItems: "center", gap: 16 }}>
+    <img
+      src="/images/logo.png"
+      alt="G-Force Exterior Cleaning"
+      style={{ height: 54, width: "auto" }}
+    />
+    <nav style={{ marginLeft: "auto", display: "flex", gap: 24, alignItems: "center" }}>
+      <a href="/gallery.html" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>
+        Gallery
+      </a>
+      <a href="/#services" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>
+        Services
+      </a>
       <a href="/blog.html" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>
-  Blog
-</a>
-      <header style={{ background: colors.bg, color: "#fff", padding: "18px 0" }}>
-        <div style={{ ...container, display: "flex", alignItems: "center", gap: 16 }}>
-          <img
-            src="/images/logo.png"
-            alt="G-Force Exterior Cleaning"
-            style={{ height: 54, width: "auto" }}
-          />
-          <nav style={{ marginLeft: "auto", display: "flex", gap: 16, alignItems: "center" }}>
-            <a href="/gallery.html" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>
-              Gallery
-            </a>
-            <a href="/#services" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>
-              Services
-            </a>
-            <a href="/#contact" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>
-  <header style={{ background: colors.bg, color: "#fff", padding: "18px 0" }}>
-  <nav style={{ display: "flex", justifyContent: "center", gap: "24px" }}>
-    <a href="/#services" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>Services</a>
-    <a href="/gallery.html" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>Gallery</a>
-    <a href="/blog.html" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>Blog</a>
-    <a href="/#contact" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>Contact</a>
-  </nav>
+        Blog
+      </a>
+      <a href="/#contact" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>
+        Contact
+      </a>
+      <a href="/finance#checkout" style={btnOutline}>
+        Finance with Klarna
+      </a>
+    </nav>
+  </div>
 </header>
+
               Contact
             </a>
             <a href="/finance#checkout" style={btnOutline}>
