@@ -18,6 +18,7 @@ const container = { maxWidth: 1100, margin: "0 auto", padding: "0 16px" };
 const h1 = { fontSize: 36, lineHeight: 1.2, margin: 0 };
 const h2 = { fontSize: 28, lineHeight: 1.25, margin: 0 };
 const p = { fontSize: 18, lineHeight: 1.7, margin: "10px 0 0" };
+const bigTitle = { fontSize: 64, lineHeight: 1.05, margin: 0, letterSpacing: 0.2 }; // ~2x up from 32–36
 
 const btnSolid = {
   background: colors.accent,
@@ -42,34 +43,32 @@ export default function Page() {
   return (
     <main>
 
-   /* ---------- HEADER (single nav) ---------- */
-<header style={{ background: colors.bg, color: "#fff", padding: "18px 0" }}>
-  <div style={{ ...container, display: "flex", alignItems: "center", gap: 16 }}>
-    <img
-      src="/images/logo.png"
-      alt="G-Force Exterior Cleaning"
-      style={{ height: 54, width: "auto" }}
-    />
-    <nav style={{ marginLeft: "auto", display: "flex", gap: 24, alignItems: "center" }}>
-      <a href="/gallery.html" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>
-        Gallery
-      </a>
-      <a href="/#services" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>
-        Services
-      </a>
-      <a href="/blog.html" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>
-        Blog
-      </a>
-      <a href="/#contact" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>
-        Contact
-      </a>
-      <a href="/finance#checkout" style={btnOutline}>
-        Finance with Klarna
-      </a>
-    </nav>
-  </div>
-</header>
+      {/* ---------- SUPER HEADER (logo + large name) ---------- */}
+      <div style={{ background: colors.bg, color: "#fff", padding: "20px 0" }}>
+        <div style={{ ...container, display: "flex", alignItems: "center", gap: 16 }}>
+          <img
+            src="/images/logo.png"
+            alt="G-Force Exterior Cleaning"
+            style={{ height: 72, width: "auto" }} // larger logo
+          />
+          <h1 style={{ ...bigTitle, marginLeft: 12 }}>G-Force Exterior Cleaning</h1>
+        </div>
+      </div>
 
+      {/* ---------- HEADER (single nav) ---------- */}
+      <header style={{ background: colors.bg, color: "#fff", padding: "12px 0", borderTop: `1px solid ${colors.border}` }}>
+        <div style={{ ...container, display: "flex", alignItems: "center", gap: 16 }}>
+          <nav style={{ marginLeft: "auto", display: "flex", gap: 24, alignItems: "center" }}>
+            <a href="/gallery.html" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>
+              Gallery
+            </a>
+            <a href="/#services" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>
+              Services
+            </a>
+            <a href="/blog.html" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>
+              Blog
+            </a>
+            <a href="/#contact" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>
               Contact
             </a>
             <a href="/finance#checkout" style={btnOutline}>
@@ -82,7 +81,7 @@ export default function Page() {
       {/* ---------- HERO BAND ---------- */}
       <section style={{ background: colors.bg, color: "#fff", padding: "28px 0 36px" }}>
         <div style={{ ...container, textAlign: "center" }}>
-          <h1 style={h1}>Broward County Pressure Cleaning</h1>
+          <h2 style={{ ...h2, color: "#fff" }}>Broward County Pressure Cleaning</h2>
           <p style={{ ...p, color: colors.lightText, margin: "12px auto 0", maxWidth: 900 }}>
             G-Force Exterior Cleaning Services helps South Florida properties look their best while
             protecting roofs, paint, and landscaping. We schedule around your needs—early mornings,
@@ -91,19 +90,10 @@ export default function Page() {
             results you can see.
           </p>
 
-          {/* CTAs */}
           <div style={{ marginTop: 18, display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
             <a href="/#contact" style={btnSolid}>Get a Free Quote</a>
             <a href="/finance#checkout" style={btnOutline}>Finance with Klarna</a>
             <a href="/gallery.html" style={btnOutline}>View Full Gallery</a>
-          </div>
-
-          <div style={{ marginTop: 16, display: "flex", gap: 18, justifyContent: "center", alignItems: "center" }}>
-            <img
-              src="/images/veteran-owned.png"
-              alt="U.S. Veteran-Owned Business"
-              style={{ height: 56, width: "auto" }}
-            />
           </div>
         </div>
       </section>
