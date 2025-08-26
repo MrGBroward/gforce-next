@@ -2,6 +2,9 @@ export const metadata = {
   title: "Finance with Klarna | G-Force Exterior Cleaning",
   description:
     "Split your exterior cleaning project into manageable payments with Klarna via Stripe. Fast approvals and clear terms.",
+  alternates: {
+    canonical: "https://getpressurecleaningbroward.com/finance",
+  },
 };
 
 const container = { maxWidth: 960, margin: "0 auto", padding: "0 16px" };
