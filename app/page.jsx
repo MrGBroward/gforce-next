@@ -2,6 +2,9 @@ export const metadata = {
   title: "G-Force Exterior Cleaning | Broward County Pressure Cleaning",
   description:
     "Veteran-owned pressure cleaning in Broward County: soft-wash roof cleaning, house & building wash, driveways/sidewalks/pavers, HOA & commercial schedules, and heavy equipment & dumpster pads.",
+  alternates: {
+    canonical: "https://getpressurecleaningbroward.com/",
+  },
 };
 
 const colors = {
