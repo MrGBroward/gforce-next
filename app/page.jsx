@@ -240,7 +240,8 @@ export default function Page() {
       </section>
 
       {/* ---------- FOOTER ---------- */}
-     <footer style={{ background: colors.bg, color: "#fff", padding: "20px 0" }}>
+    {/* --- Footer --- */}
+<footer style={{ background: colors.bg, color: "#fff", padding: "20px 0" }}>
   <div style={{ ...container, textAlign: "center", fontSize: 14 }}>
     <div style={{ marginBottom: 8 }}>
       <a href="/privacy-policy.html" style={{ color: "#fff", textDecoration: "underline" }}>
@@ -255,6 +256,7 @@ export default function Page() {
         Gallery
       </a>
       <span style={{ opacity: 0.6 }}> &nbsp;•&nbsp; </span>
+      {/* Keep Klarna EXACTLY as-is */}
       <a href="/finance#checkout" style={{ color: "#fff", textDecoration: "underline" }}>
         Finance with Klarna
       </a>
@@ -264,3 +266,7 @@ export default function Page() {
     </div>
   </div>
 </footer>
+
+</main>
+);
+}
