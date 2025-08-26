@@ -240,27 +240,27 @@ export default function Page() {
       </section>
 
       {/* ---------- FOOTER ---------- */}
-      <footer style={{ background: colors.bg, color: "#fff", padding: "20px 0" }}>
-        <div style={{ ...container, textAlign: "center", fontSize: 14 }}>
-          <div style={{ marginBottom: 8 }}>
-            <a href="/privacy-policy.html" style={{ color: "#fff", textDecoration: "underline" }}>
-              Privacy Policy
-            </a>
-            <span style={{ opacity: 0.6 }}> &nbsp;•&nbsp; </span>
-            <a href="/gallery.html" style={{ color: "#fff", textDecoration: "underline" }}>
-              Gallery
-            </a>
-            <span style={{ opacity: 0.6 }}> &nbsp;•&nbsp; </span>
-            <a href="/finance#checkout" style={{ color: "#fff", textDecoration: "underline" }}>
-              Finance with Klarna
-            </a>
-          </div>
-          <div style={{ opacity: 0.7 }}>
-            © {new Date().getFullYear()} G-Force Exterior Cleaning Services — Broward County, FL
-          </div>
-        </div>
-      </footer>
-
-    </main>
-  );
-}
+     <footer style={{ background: colors.bg, color: "#fff", padding: "20px 0" }}>
+  <div style={{ ...container, textAlign: "center", fontSize: 14 }}>
+    <div style={{ marginBottom: 8 }}>
+      <a href="/privacy-policy.html" style={{ color: "#fff", textDecoration: "underline" }}>
+        Privacy Policy
+      </a>
+      <span style={{ opacity: 0.6 }}> &nbsp;•&nbsp; </span>
+      <a href="/terms-and-conditions.html" style={{ color: "#fff", textDecoration: "underline" }}>
+        Terms &amp; Conditions
+      </a>
+      <span style={{ opacity: 0.6 }}> &nbsp;•&nbsp; </span>
+      <a href="/gallery.html" style={{ color: "#fff", textDecoration: "underline" }}>
+        Gallery
+      </a>
+      <span style={{ opacity: 0.6 }}> &nbsp;•&nbsp; </span>
+      <a href="/finance#checkout" style={{ color: "#fff", textDecoration: "underline" }}>
+        Finance with Klarna
+      </a>
+    </div>
+    <div style={{ opacity: 0.7 }}>
+      © {new Date().getFullYear()} G-Force Exterior Cleaning Services — Broward County, FL
+    </div>
+  </div>
+</footer>
