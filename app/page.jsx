@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "G-Force Exterior Cleaning |Pressure Cleaning Broward County",
+  title: "Expert Pressure Cleaning Broward County|G Force Exterior Cleaning Services",
   description:
     "Veteran-owned pressure cleaning in Broward County: soft-wash roof cleaning, house & building wash, driveways/sidewalks/pavers, HOA & commercial schedules, and heavy equipment & dumpster pads.",
   alternates: {
