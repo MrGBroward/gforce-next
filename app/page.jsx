@@ -54,7 +54,7 @@ export default function Page() {
             alt="G-Force Exterior Cleaning"
             style={{ height: 72, width: "auto" }} // larger logo
           />
-          <h1 style={{ ...bigTitle, marginLeft: 12 }}>Expert Pressure Cleaning Broward - G-Force Exterior Cleaning</h1>
+          <h1 style={{ ...bigTitle, marginLeft: 12 }}>Expert Pressure Cleaning Broward  G-Force Exterior Cleaning</h1>
         </div>
       </div>
 
