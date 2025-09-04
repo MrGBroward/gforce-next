@@ -6,8 +6,8 @@ export const metadata = {
   alternates: {
     canonical: "https://getpressurecleaningbroward.com/",
   },
-  other: {
-    "google-site-verification: googlee70c59495ec5ac21.html",
+  verification: {
+    google: "googlee70c59495ec5ac21.html",
   },
 };
 
@@ -18,6 +18,7 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
 
 
 
