@@ -153,143 +153,130 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ---------- CONTACT ---------- */}
-      <section id="contact" style={{ background: colors.bg, color: "#fff", padding: "48px 16px" }}>
-        <div style={{ ...container, maxWidth: 900 }}>
-          <h2
-            style={{
-              textAlign: "center",
-              margin: "0 0 8px",
-              fontSize: 28,
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: "12px",
-              flexWrap: "wrap",
-            }}
-          >
-            Contact G-Force
-            <a
-              href="tel:+17547527570"
-              aria-label="Call G-Force at (754) 752-7570"
-              style={{
-                fontSize: 28,
-                color: "#fff",
-                textDecoration: "none",
-                fontWeight: "bold",
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-              }}
-            >
-              {/* Phone Icon (SVG) */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="26"
-                height="26"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                style={{ flexShrink: 0 }}
-              >
-                <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.72 11.72 0 003.64 1.17 1 1 0 01.87 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 .87 11.72 11.72 0 001.17 3.64 1 1 0 01-.21 1.11l-2.2 2.17z" />
-              </svg>
-              (754) 752-7570
-            </a>
-          </h2>
+   {/* ---------- CONTACT ---------- */}
+<section id="contact" style={{ background: colors.bg, color: "#fff", padding: "48px 16px" }}>
+  <div style={{ ...container, maxWidth: 900 }}>
+    {/* Header + Phone */}
+    <h2
+      style={{
+        textAlign: "center",
+        margin: "0 0 8px",
+        fontSize: 28,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "12px",
+        flexWrap: "wrap",
+      }}
+    >
+      Contact G-Force
+      <a
+        href="tel:+17547527570"
+        style={{
+          fontSize: 28,
+          color: "#fff",
+          textDecoration: "none",
+          fontWeight: "bold",
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "6px",
+        }}
+      >
+        {/* Simple phone icon */}
+        📞 (754) 752-7570
+      </a>
+    </h2>
 
-          <p style={{ textAlign: "center", margin: "0 0 24px", color: colors.lightText }}>
-            Tell us what you’d like cleaned and we’ll confirm pricing &amp; scheduling.
-          </p>
+    <p style={{ textAlign: "center", margin: "0 0 24px", color: colors.lightText }}>
+      Tell us what you’d like cleaned and we’ll confirm pricing &amp; scheduling.
+    </p>
 
-          {/* Netlify form */}
-          <form
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            action="/thanks.html"
-            style={{
-              display: "grid",
-              gap: 12,
-              maxWidth: 520,
-              margin: "0 auto",
-              background: colors.panel,
-              padding: 20,
-              borderRadius: 12,
-              border: `1px solid ${colors.border}`,
-            }}
-          >
-            <input type="hidden" name="form-name" value="contact" />
+    {/* Vercel-Friendly Form */}
+    <form
+      name="contact"
+      method="POST"
+      action="/api/contact"
+      style={{
+        display: "grid",
+        gap: 12,
+        maxWidth: 520,
+        margin: "0 auto",
+        background: colors.panel,
+        padding: 20,
+        borderRadius: 12,
+        border: `1px solid ${colors.border}`,
+      }}
+    >
+      <label style={{ display: "grid", gap: 6, fontSize: 14, color: "#e2e8f0" }}>
+        Name
+        <input
+          type="text"
+          name="name"
+          required
+          style={{
+            width: "100%",
+            padding: "12px 14px",
+            borderRadius: 10,
+            border: "1px solid #334155",
+            background: "#fff",
+            color: colors.ink,
+          }}
+        />
+      </label>
 
-            <label style={{ display: "grid", gap: 6, fontSize: 14, color: "#e2e8f0" }}>
-              Name
-              <input
-                type="text"
-                name="name"
-                required
-                style={{
-                  width: "100%",
-                  padding: "12px 14px",
-                  borderRadius: 10,
-                  border: "1px solid #334155",
-                  background: "#ffffff",
-                  color: colors.ink,
-                }}
-              />
-            </label>
+      <label style={{ display: "grid", gap: 6, fontSize: 14, color: "#e2e8f0" }}>
+        Email
+        <input
+          type="email"
+          name="email"
+          required
+          style={{
+            width: "100%",
+            padding: "12px 14px",
+            borderRadius: 10,
+            border: "1px solid #334155",
+            background: "#fff",
+            color: colors.ink,
+          }}
+        />
+      </label>
 
-            <label style={{ display: "grid", gap: 6, fontSize: 14, color: "#e2e8f0" }}>
-              Email
-              <input
-                type="email"
-                name="email"
-                required
-                style={{
-                  width: "100%",
-                  padding: "12px 14px",
-                  borderRadius: 10,
-                  border: "1px solid #334155",
-                  background: "#ffffff",
-                  color: colors.ink,
-                }}
-              />
-            </label>
+      <label style={{ display: "grid", gap: 6, fontSize: 14, color: "#e2e8f0" }}>
+        What would you like cleaned?
+        <textarea
+          name="message"
+          rows={5}
+          required
+          style={{
+            width: "100%",
+            padding: "12px 14px",
+            borderRadius: 10,
+            border: "1px solid #334155",
+            background: "#fff",
+            color: colors.ink,
+            resize: "vertical",
+          }}
+        />
+      </label>
 
-            <label style={{ display: "grid", gap: 6, fontSize: 14, color: "#e2e8f0" }}>
-              What would you like cleaned?
-              <textarea
-                name="message"
-                rows={5}
-                required
-                style={{
-                  width: "100%",
-                  padding: "12px 14px",
-                  borderRadius: 10,
-                  border: "1px solid #334155",
-                  background: "#ffffff",
-                  color: colors.ink,
-                  resize: "vertical",
-                }}
-              />
-            </label>
-
-            <button
-              type="submit"
-              style={{
-                marginTop: 4,
-                background: colors.accent,
-                color: "#fff",
-                padding: "12px 18px",
-                border: "none",
-                borderRadius: 10,
-                fontWeight: 700,
-                cursor: "pointer",
-              }}
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
-      </section>
+      <button
+        type="submit"
+        style={{
+          marginTop: 4,
+          background: colors.accent,
+          color: "#fff",
+          padding: "12px 18px",
+          border: "none",
+          borderRadius: 10,
+          fontWeight: 700,
+          cursor: "pointer",
+        }}
+      >
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
 
       {/* ---------- FOOTER ---------- */}
       <footer style={{ background: colors.bg, color: "#fff", padding: "20px 0" }}>
