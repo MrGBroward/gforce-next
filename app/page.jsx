@@ -21,7 +21,7 @@ const container = { maxWidth: 1100, margin: "0 auto", padding: "0 16px" };
 const h1 = { fontSize: 36, lineHeight: 1.2, margin: 0 };
 const h2 = { fontSize: 28, lineHeight: 1.25, margin: 0 };
 const p = { fontSize: 18, lineHeight: 1.7, margin: "10px 0 0" };
-const bigTitle = { fontSize: 64, lineHeight: 1.05, margin: 0, letterSpacing: 0.2 }; // ~2x up from 32–36
+const bigTitle = { fontSize: 64, lineHeight: 1.05, margin: 0, letterSpacing: 0.2 };
 
 const btnSolid = {
   background: colors.accent,
@@ -45,21 +45,27 @@ const btnOutline = {
 export default function Page() {
   return (
     <main>
-
       {/* ---------- SUPER HEADER (logo + large name) ---------- */}
       <div style={{ background: colors.bg, color: "#fff", padding: "20px 0" }}>
         <div style={{ ...container, display: "flex", alignItems: "center", gap: 16 }}>
           <img
             src="/images/logo.png"
             alt="G-Force Exterior Cleaning"
-            style={{ height: 72, width: "auto" }} // larger logo
+            style={{ height: 72, width: "auto" }}
           />
           <h1 style={{ ...bigTitle, marginLeft: 12 }}>G-Force Exterior Cleaning Services</h1>
         </div>
       </div>
 
       {/* ---------- HEADER (single nav) ---------- */}
-      <header style={{ background: colors.bg, color: "#fff", padding: "12px 0", borderTop: `1px solid ${colors.border}` }}>
+      <header
+        style={{
+          background: colors.bg,
+          color: "#fff",
+          padding: "12px 0",
+          borderTop: `1px solid ${colors.border}`,
+        }}
+      >
         <div style={{ ...container, display: "flex", alignItems: "center", gap: 16 }}>
           <nav style={{ marginLeft: "auto", display: "flex", gap: 24, alignItems: "center" }}>
             <a href="/gallery.html" style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}>
@@ -126,7 +132,10 @@ export default function Page() {
               </a>
             </li>
             <li>
-              <a href="/services/pressure-cleaning-driveways-sidewalks-pavers.html" style={{ color: colors.ink, textDecoration: "underline" }}>
+              <a
+                href="/services/pressure-cleaning-driveways-sidewalks-pavers.html"
+                style={{ color: colors.ink, textDecoration: "underline" }}
+              >
                 Pressure Cleaning – Driveways, sidewalks &amp; pavers (sealing optional)
               </a>
             </li>
@@ -144,62 +153,53 @@ export default function Page() {
         </div>
       </section>
 
-   {/* ---------- CONTACT ---------- */}
-<section
-  id="contact"
-  style={{ background: colors.bg, color: "#fff", padding: "48px 16px" }}
->
-  <div style={{ ...container, maxWidth: 900 }}>
-    <h2
-      style={{
-        textAlign: "center",
-        margin: "0 0 8px",
-        fontSize: 28,
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        gap: "12px", // spacing between title and number
-        flexWrap: "wrap", // wraps on smaller screens
-      }}
-    >
-      Contact G-Force
-      <a
-        href="tel:+17547527570"
-        style={{
-          fontSize: 28,
-          color: "#fff",
-          textDecoration: "none",
-          fontWeight: "bold",
-          display: "flex",
-          alignItems: "center",
-          gap: "8px",
-        }}
-      >
-        {/* Phone Icon (SVG) */}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="26"
-          height="26"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-          style={{ flexShrink: 0 }}
-        >
-          <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.72 11.72 0 003.64 1.17 1 1 0 01.87 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 .87 11.72 11.72 0 001.17 3.64 1 1 0 01-.21 1.11l-2.2 2.17z" />
-        </svg>
-        (754) 752-7570
-      </a>
-    </h2>
-    <p
-      style={{
-        textAlign: "center",
-        margin: "0 0 24px",
-        color: colors.lightText,
-      }}
-    >
-      Tell us what you’d like cleaned and we’ll confirm pricing &amp; scheduling.
-    </p>
-  </div>
-</section>
+      {/* ---------- CONTACT ---------- */}
+      <section id="contact" style={{ background: colors.bg, color: "#fff", padding: "48px 16px" }}>
+        <div style={{ ...container, maxWidth: 900 }}>
+          <h2
+            style={{
+              textAlign: "center",
+              margin: "0 0 8px",
+              fontSize: 28,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              gap: "12px",
+              flexWrap: "wrap",
+            }}
+          >
+            Contact G-Force
+            <a
+              href="tel:+17547527570"
+              aria-label="Call G-Force at (754) 752-7570"
+              style={{
+                fontSize: 28,
+                color: "#fff",
+                textDecoration: "none",
+                fontWeight: "bold",
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+              }}
+            >
+              {/* Phone Icon (SVG) */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                style={{ flexShrink: 0 }}
+              >
+                <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.72 11.72 0 003.64 1.17 1 1 0 01.87 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 .87 11.72 11.72 0 001.17 3.64 1 1 0 01-.21 1.11l-2.2 2.17z" />
+              </svg>
+              (754) 752-7570
+            </a>
+          </h2>
+
+          <p style={{ textAlign: "center", margin: "0 0 24px", color: colors.lightText }}>
+            Tell us what you’d like cleaned and we’ll confirm pricing &amp; scheduling.
+          </p>
 
           {/* Netlify form */}
           <form
@@ -292,33 +292,31 @@ export default function Page() {
       </section>
 
       {/* ---------- FOOTER ---------- */}
-    {/* --- Footer --- */}
-<footer style={{ background: colors.bg, color: "#fff", padding: "20px 0" }}>
-  <div style={{ ...container, textAlign: "center", fontSize: 14 }}>
-    <div style={{ marginBottom: 8 }}>
-      <a href="/privacy-policy.html" style={{ color: "#fff", textDecoration: "underline" }}>
-        Privacy Policy
-      </a>
-      <span style={{ opacity: 0.6 }}> &nbsp;•&nbsp; </span>
-      <a href="/terms-and-conditions.html" style={{ color: "#fff", textDecoration: "underline" }}>
-        Terms &amp; Conditions
-      </a>
-      <span style={{ opacity: 0.6 }}> &nbsp;•&nbsp; </span>
-      <a href="/gallery.html" style={{ color: "#fff", textDecoration: "underline" }}>
-        Gallery
-      </a>
-      <span style={{ opacity: 0.6 }}> &nbsp;•&nbsp; </span>
-      {/* Keep Klarna EXACTLY as-is */}
-      <a href="/finance#checkout" style={{ color: "#fff", textDecoration: "underline" }}>
-        Finance with Klarna
-      </a>
-    </div>
-    <div style={{ opacity: 0.7 }}>
-      © {new Date().getFullYear()} G-Force Exterior Cleaning Services — Broward County, FL
-    </div>
-  </div>
-</footer>
-
-</main>
-);
+      <footer style={{ background: colors.bg, color: "#fff", padding: "20px 0" }}>
+        <div style={{ ...container, textAlign: "center", fontSize: 14 }}>
+          <div style={{ marginBottom: 8 }}>
+            <a href="/privacy-policy.html" style={{ color: "#fff", textDecoration: "underline" }}>
+              Privacy Policy
+            </a>
+            <span style={{ opacity: 0.6 }}> &nbsp;•&nbsp; </span>
+            <a href="/terms-and-conditions.html" style={{ color: "#fff", textDecoration: "underline" }}>
+              Terms &amp; Conditions
+            </a>
+            <span style={{ opacity: 0.6 }}> &nbsp;•&nbsp; </span>
+            <a href="/gallery.html" style={{ color: "#fff", textDecoration: "underline" }}>
+              Gallery
+            </a>
+            <span style={{ opacity: 0.6 }}> &nbsp;•&nbsp; </span>
+            {/* Keep Klarna EXACTLY as-is */}
+            <a href="/finance#checkout" style={{ color: "#fff", textDecoration: "underline" }}>
+              Finance with Klarna
+            </a>
+          </div>
+          <div style={{ opacity: 0.7 }}>
+            © {new Date().getFullYear()} G-Force Exterior Cleaning Services — Broward County, FL
+          </div>
+        </div>
+      </footer>
+    </main>
+  );
 }
