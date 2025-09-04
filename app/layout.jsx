@@ -7,7 +7,7 @@ export const metadata = {
     canonical: "https://getpressurecleaningbroward.com/",
   },
   other: {
-    "google-site-verification": "googlebeeabf6cde3ad875.html",
+    "google-site-verification: googlee70c59495ec5ac21.html",
   },
 };
 
