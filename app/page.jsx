@@ -144,7 +144,7 @@ export default function Page() {
         </div>
       </section>
 
-    {/* ---------- CONTACT ---------- */}
+   {/* ---------- CONTACT ---------- */}
 <section
   id="contact"
   style={{ background: colors.bg, color: "#fff", padding: "48px 16px" }}
@@ -158,12 +158,36 @@ export default function Page() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        gap: "12px", // spacing between title and phone number
-        flexWrap: "wrap", // wraps on mobile for responsiveness
+        gap: "12px", // spacing between title and number
+        flexWrap: "wrap", // wraps on smaller screens
       }}
     >
       Contact G-Force
-      <span style={{ fontSize: 28, color: "#fff" }}>(754) 752-7570</span>
+      <a
+        href="tel:+17547527570"
+        style={{
+          fontSize: 28,
+          color: "#fff",
+          textDecoration: "none",
+          fontWeight: "bold",
+          display: "flex",
+          alignItems: "center",
+          gap: "8px",
+        }}
+      >
+        {/* Phone Icon (SVG) */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="26"
+          height="26"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          style={{ flexShrink: 0 }}
+        >
+          <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.72 11.72 0 003.64 1.17 1 1 0 01.87 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 .87 11.72 11.72 0 001.17 3.64 1 1 0 01-.21 1.11l-2.2 2.17z" />
+        </svg>
+        (754) 752-7570
+      </a>
     </h2>
     <p
       style={{
