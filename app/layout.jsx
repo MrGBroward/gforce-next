@@ -1,10 +1,14 @@
+// app/layout.jsx
 export const metadata = {
-  title: "G-Force Exterior Cleaning",
+  title: "G Force Exterior Cleaning",
   description:
     "Veteran-owned exterior cleaning company specializing in dumpster pad cleaning and professional pressure washing services in Broward, Miami-Dade, and Palm Beach counties.",
+  alternates: {
+    canonical: "https://getpressurecleaningbroward.com/",
+  },
   other: {
-    "google-site-verification: googlebeeabf6cde3ad875.html"
-  }
+    "google-site-verification": "googlebeeabf6cde3ad875.html",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -14,5 +18,6 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
 
 
