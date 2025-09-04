@@ -144,13 +144,38 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ---------- CONTACT ---------- */}
-      <section id="contact" style={{ background: colors.bg, color: "#fff", padding: "48px 16px" }}>
-        <div style={{ ...container, maxWidth: 900 }}>
-          <h2 style={{ textAlign: "center", margin: "0 0 8px", fontSize: 28 }}>Contact G-Force</h2>
-          <p style={{ textAlign: "center", margin: "0 0 24px", color: colors.lightText }}>
-            Tell us what you’d like cleaned and we’ll confirm pricing &amp; scheduling.
-          </p>
+    {/* ---------- CONTACT ---------- */}
+<section
+  id="contact"
+  style={{ background: colors.bg, color: "#fff", padding: "48px 16px" }}
+>
+  <div style={{ ...container, maxWidth: 900 }}>
+    <h2
+      style={{
+        textAlign: "center",
+        margin: "0 0 8px",
+        fontSize: 28,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "12px", // spacing between title and phone number
+        flexWrap: "wrap", // wraps on mobile for responsiveness
+      }}
+    >
+      Contact G-Force
+      <span style={{ fontSize: 28, color: "#fff" }}>(754) 752-7570</span>
+    </h2>
+    <p
+      style={{
+        textAlign: "center",
+        margin: "0 0 24px",
+        color: colors.lightText,
+      }}
+    >
+      Tell us what you’d like cleaned and we’ll confirm pricing &amp; scheduling.
+    </p>
+  </div>
+</section>
 
           {/* Netlify form */}
           <form
