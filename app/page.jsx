@@ -147,7 +147,7 @@ export default function Page() {
       {/* ---------- CONTACT ---------- */}
       <section id="contact" style={{ background: colors.bg, color: "#fff", padding: "48px 16px" }}>
         <div style={{ ...container, maxWidth: 900 }}>
-          <h2 style={{ textAlign: "left", margin: "0 0 8px", fontSize: 28 }}>Contact G-Force (754)752-7570</h2>
+          <h2 style={{ textAlign: "center", margin: "0 0 8px", fontSize: 28 }}>Contact G-Force</h2>
           <p style={{ textAlign: "center", margin: "0 0 24px", color: colors.lightText }}>
             Tell us what you’d like cleaned and we’ll confirm pricing &amp; scheduling.
           </p>
