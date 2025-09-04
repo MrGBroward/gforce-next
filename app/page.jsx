@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "G Force Exterior Cleaning Services(754)752-7570|Pressure Cleaning Broward",
+  title: "G Force Exterior Cleaning Services (754)752-7570|Pressure Cleaning Broward",
   description:
     "Veteran-owned pressure cleaning in Broward County: soft-wash roof cleaning, house & building wash, driveways/sidewalks/pavers, HOA & commercial schedules, and heavy equipment & dumpster pads.",
   alternates: {
