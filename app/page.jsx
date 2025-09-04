@@ -153,45 +153,37 @@ export default function Page() {
         </div>
       </section>
 
-   {/* ---------- CONTACT ---------- */}
+  {/* ---------- CONTACT ---------- */}
 <section id="contact" style={{ background: colors.bg, color: "#fff", padding: "48px 16px" }}>
   <div style={{ ...container, maxWidth: 900 }}>
-    {/* Header + Phone */}
+    {/* Title + Click-to-Call Number */}
     <h2
       style={{
         textAlign: "center",
         margin: "0 0 8px",
         fontSize: 28,
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        gap: "12px",
-        flexWrap: "wrap",
+        display: "inline-block",
+        width: "100%",
       }}
     >
-      Contact G-Force
-      <a
-        href="tel:+17547527570"
-        style={{
-          fontSize: 28,
-          color: "#fff",
-          textDecoration: "none",
-          fontWeight: "bold",
-          display: "inline-flex",
-          alignItems: "center",
-          gap: "6px",
-        }}
-      >
-        {/* Simple phone icon */}
-        📞 (754) 752-7570
-      </a>
+      <span style={{ display: "inline-flex", alignItems: "center", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
+        Contact G-Force
+        <a
+          href="tel:+17547527570"
+          aria-label="Call G-Force at (754) 752-7570"
+          style={{ fontSize: 28, color: "#fff", textDecoration: "none", fontWeight: 700, display: "inline-flex", alignItems: "center", gap: 8 }}
+        >
+          {/* simple, reliable icon */}
+          <span aria-hidden="true">📞</span> (754) 752-7570
+        </a>
+      </span>
     </h2>
 
     <p style={{ textAlign: "center", margin: "0 0 24px", color: colors.lightText }}>
       Tell us what you’d like cleaned and we’ll confirm pricing &amp; scheduling.
     </p>
 
-    {/* Vercel-Friendly Form */}
+    {/* Vercel-friendly form → posts to /api/contact */}
     <form
       name="contact"
       method="POST"
@@ -207,6 +199,9 @@ export default function Page() {
         border: `1px solid ${colors.border}`,
       }}
     >
+      {/* Honeypot (bots only) */}
+      <input type="text" name="website" tabIndex="-1" autoComplete="off" style={{ position: "absolute", left: "-9999px" }} />
+
       <label style={{ display: "grid", gap: 6, fontSize: 14, color: "#e2e8f0" }}>
         Name
         <input
@@ -218,7 +213,7 @@ export default function Page() {
             padding: "12px 14px",
             borderRadius: 10,
             border: "1px solid #334155",
-            background: "#fff",
+            background: "#ffffff",
             color: colors.ink,
           }}
         />
@@ -235,7 +230,7 @@ export default function Page() {
             padding: "12px 14px",
             borderRadius: 10,
             border: "1px solid #334155",
-            background: "#fff",
+            background: "#ffffff",
             color: colors.ink,
           }}
         />
@@ -252,7 +247,7 @@ export default function Page() {
             padding: "12px 14px",
             borderRadius: 10,
             border: "1px solid #334155",
-            background: "#fff",
+            background: "#ffffff",
             color: colors.ink,
             resize: "vertical",
           }}
