@@ -1,11 +1,4 @@
 import { NextResponse } from "next/server";
-
-// OPTIONAL EMAIL via Resend:
-// 1) npm i resend
-// 2) uncomment the lines below and set env vars (see notes)
-// import { Resend } from "resend";
-// const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(req) {
   const contentType = req.headers.get("content-type") || "";
   let data = {};
@@ -37,8 +30,6 @@ export async function POST(req) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
   }
 
-  // OPTIONAL: send email via Resend
-  /*
   try {
     await resend.emails.send({
       from: process.env.FROM_EMAIL,  // e.g. "G-Force <hello@gforceclean.com>"
