@@ -52,16 +52,6 @@
           Heavy equipment &amp; dumpster pads
         </a>
       </li>
-      <li>
-        <a
-          href="https://www.gforceclean.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: colors.ink, textDecoration: "underline" }}
-        >
-          Dumpster Pad Cleaning
-        </a>
-      </li>
     </ul>
   </div>
 </section>
