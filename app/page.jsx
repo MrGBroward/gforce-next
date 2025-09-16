@@ -39,109 +39,40 @@
         border: "1px solid #1f2a44",
       }}
     >
-      {/* Honeypot field for bots */}
-      <input
-        type="text"
-        name="website"
-        tabIndex="-1"
-        autoComplete="off"
-        style={{ position: "absolute", left: "-9999px" }}
-      />
+      <input type="text" name="website" tabIndex="-1" autoComplete="off" style={{ position: "absolute", left: "-9999px" }} />
 
       <label style={{ display: "grid", gap: 6, fontSize: 14, color: "#e2e8f0" }}>
         Name
-        <input
-          type="text"
-          name="name"
-          required
-          style={{
-            width: "100%",
-            padding: "12px 14px",
-            borderRadius: 10,
-            border: "1px solid #334155",
-            background: "#ffffff",
-            color: "#0f172a",
-          }}
-        />
+        <input type="text" name="name" required style={{ width: "100%", padding: "12px 14px", borderRadius: 10, border: "1px solid #334155", background: "#fff", color: "#0f172a" }} />
       </label>
 
       <label style={{ display: "grid", gap: 6, fontSize: 14, color: "#e2e8f0" }}>
         Email
-        <input
-          type="email"
-          name="email"
-          required
-          style={{
-            width: "100%",
-            padding: "12px 14px",
-            borderRadius: 10,
-            border: "1px solid #334155",
-            background: "#ffffff",
-            color: "#0f172a",
-          }}
-        />
+        <input type="email" name="email" required style={{ width: "100%", padding: "12px 14px", borderRadius: 10, border: "1px solid #334155", background: "#fff", color: "#0f172a" }} />
       </label>
 
       <label style={{ display: "grid", gap: 6, fontSize: 14, color: "#e2e8f0" }}>
         What would you like cleaned?
-        <textarea
-          name="message"
-          rows={5}
-          required
-          style={{
-            width: "100%",
-            padding: "12px 14px",
-            borderRadius: 10,
-            border: "1px solid #334155",
-            background: "#ffffff",
-            color: "#0f172a",
-            resize: "vertical",
-          }}
-        />
+        <textarea name="message" rows={5} required style={{ width: "100%", padding: "12px 14px", borderRadius: 10, border: "1px solid #334155", background: "#fff", color: "#0f172a", resize: "vertical" }} />
       </label>
 
-      <button
-        type="submit"
-        style={{
-          marginTop: 4,
-          background: "#0074de",
-          color: "#fff",
-          padding: "12px 18px",
-          border: "none",
-          borderRadius: 10,
-          fontWeight: 700,
-          cursor: "pointer",
-        }}
-      >
+      <button type="submit" style={{ marginTop: 4, background: "#0074de", color: "#fff", padding: "12px 18px", border: "none", borderRadius: 10, fontWeight: 700, cursor: "pointer" }}>
         Send Message
       </button>
     </form>
 
     {/* Footer links row */}
     <div style={{ textAlign: "center", fontSize: 14, marginBottom: 10 }}>
-      <a href="/privacy-policy.html" style={{ color: "#fff", textDecoration: "underline" }}>
-        Privacy Policy
-      </a>
+      <a href="/privacy-policy.html" style={{ color: "#fff", textDecoration: "underline" }}>Privacy Policy</a>
       <span style={{ opacity: 0.6 }}> &nbsp;•&nbsp; </span>
-      <a href="/terms-and-conditions.html" style={{ color: "#fff", textDecoration: "underline" }}>
-        Terms &amp; Conditions
-      </a>
+      <a href="/terms-and-conditions.html" style={{ color: "#fff", textDecoration: "underline" }}>Terms &amp; Conditions</a>
       <span style={{ opacity: 0.6 }}> &nbsp;•&nbsp; </span>
-      <a href="/gallery.html" style={{ color: "#fff", textDecoration: "underline" }}>
-        Gallery
-      </a>
+      <a href="/gallery.html" style={{ color: "#fff", textDecoration: "underline" }}>Gallery</a>
       <span style={{ opacity: 0.6 }}> &nbsp;•&nbsp; </span>
-      <a href="/finance#checkout" style={{ color: "#fff", textDecoration: "underline" }}>
-        Finance with Klarna
-      </a>
+      <a href="/finance#checkout" style={{ color: "#fff", textDecoration: "underline" }}>Finance with Klarna</a>
       <span style={{ opacity: 0.6 }}> &nbsp;•&nbsp; </span>
-      <a
-        href="https://www.gforceclean.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ color: "#fff", textDecoration: "underline" }}
-      >
-        Dumpster Pad Cleaning
+      <a href="https://www.gforceclean.com/" target="_blank" rel="noopener noreferrer" style={{ color: "#fff", textDecoration: "underline" }}>
+        Dumpster Pad Cleaning (Commercial Site)
       </a>
     </div>
 
@@ -172,3 +103,5 @@
 >
   📞 Call Now
 </a>
+
+ 
